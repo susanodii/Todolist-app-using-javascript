@@ -41,7 +41,7 @@ const renderTodoItems = () => {
       return `
 <li class =${iscompleted && 'checked'}>
 ${title}
-<span class="--" onClick = "toggleComplete(${_id})">✔</span>
+<span class="complete-icon" onClick = "toggleComplete(${_id})">✔</span>
 <span class="edit-icon" onClick = "editMode(${_id})">✍</span>
 <span class="close" onClick = "deleteTodo(${_id})">🚮</span>
 
@@ -51,7 +51,7 @@ ${title}
 
   todoListContainer.innerHTML = todoListItems
 }
-
+// class="--"
 // Todo toggle complete
 function toggleComplete(_id) {
   const todoToToggle = todoInstance.find((todo) => todo._id === _id)
